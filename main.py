@@ -1,5 +1,6 @@
 import sys
-import nltk
+# import nltk
+
 
 def main(request):
     """Given a english phrase, converts it into the appropriate AutoHotkey script"""
@@ -8,14 +9,21 @@ def main(request):
     return
 
 
+def launch_site(key, modifier, site):
+    script = mod_to_char(modifier) + key + "::Run " + site
+    return script
+
+
 def launch_app(key, modifier, app_name):
     # Prompt user for full file path
-    return
+    file_path = ""
+    script = mod_to_char(modifier) + key + "::Run " + file_path
+    return script
 
 
 def rebind_key(old_key, modifier, new_key):
-    script = mod_to_key(modifier) + old_key + "::\n" + new_key + "\nreturn"
-    return
+    script = mod_to_char(modifier) + old_key + "::" + new_key
+    return script
 
 
 def rebind_phrase(old_phrase, new_phrase):
@@ -23,17 +31,17 @@ def rebind_phrase(old_phrase, new_phrase):
     return script
 
 
-def mod_to_key(modifier):
-    if modifier == "windows":
+def mod_to_char(modifier):
+    if modifier.lower() == "windows":
         return "#"
-    elif modifier == "alt":
+    elif modifier.lower() == "alt":
         return "!"
-    elif modifier == "control":
+    elif modifier.lower() == "control":
         return "^"
-    elif modifier == "shift":
+    elif modifier.lower() == "shift":
         return "+"
     else:
-        return "no_mod_found"
+        return ""
 
 if __name__ == "__main__":
     main(sys.argv[1])
