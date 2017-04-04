@@ -1,0 +1,229 @@
+Makes   NNP	O
+Capslock        NNP	orig
+become  VB	O
+a       DT	O
+Control NNP	repl
+key     NN	O
+
+Makes   NNP	O
+Capslock        NNP	orig
+become  VB	O
+a       DT	O
+Control NNP	repl
+key     NN	O	
+
+Replace NNP	O
+the     DT	O
+a       DT	orig
+key     NN	O
+with    IN	O
+the     DT	O
+b       NN	repl
+key     NN	O
+
+When    WRB	O
+I       PRP	O
+press   VBP	O
+ctrl    JJ	mod
++       NNP	O
+c       NN	orig
+enter   NN	O
+F4      NNP	repl
+
+Swap    NNP	O
+the     DT	O	
+capslock        NN	orig
+with    IN	O
+shift   NN	repl
+
+Makes   NNS	O
+windows NNS	mod
++       NNP	O
+c       VBZ	orig
+become  VBN O
+capslock        NN	repl
+
+Swap    NNP	O
+the     DT	O
+alt     NN	orig
+and     CC	O
+control NN	repl
+key     NN	O
+
+Make    VB	O
+the     DT	O
+;       :	orig
+key     JJ	O
+enter   NN	O
+:       :	repl
+
+When    WRB	O
+I       PRP	O
+press   VBP	O
+ctrl    JJ	mod
++       NNP	O
+h       NN	orig
+use     VBP	O
+the     DT	O
+Home    NNP	repl
+key     NN	O
+
+Use     NNP	O
+del     NN	repl
+when    WRB	O
+I       PRP	O
+press   VBP	O
+`       ``	orig
+
+Instead RB	O
+of      IN	O
+control NN	mod
+up      RB	orig
+use     RB	O
+page    VB	repl
+up      RP	repl
+
+Instead RB	O
+of      IN	O
+control NN	mod
+down    RP	orig
+use     NN	O
+page    NN	repl
+down    RP	repl
+
+Make    NNP O
+alt     NN mod
+I       PRP orig
+into    IN O
+ins     NNS repl
+
+Replace NNP O
+q       NN orig
+with    IN O
+t       NN repl
+
+Make    NNP	O
+alt     VBD	mod
+1       CD	orig
+press   NN	O
+F1      NNP	repl
+
+The     DT	O
+hotkey  NN	O
+alt     VBD	mod
+2       CD	orig
+should  MD	O
+trigger VB	O
+F2      NNP	repl
+
+Make    NNP O
+windows VBZ mod
+3       CD	orig
+press   NN	O
+F3      NNP	repl
+
+Use     NNP O
+shift   NN repl
+instead RB O
+of      IN O
+caps    NNS orig
+lock    NN orig
+
+Makes   NNP O
+tab     NN orig
+become  VB O
+a       DT O
+Control NNP repl
+key     NN O
+
+Replace NNP	O
+the     DT	O
+{       (	orig
+key     NN	O
+with    IN	O
+the     DT	O
+(       (	repl
+key     JJ	O
+
+When    WRB	O
+I       PRP	O
+press   VBP	O
+ctrl    JJ	mod
++       NNP	O
+d       NN	orig
+enter   NN	O
+delete  NN	repl
+
+Swap    NNP	O
+the     DT	O
+windows NNS	orig
+key     VBP	O
+with    IN	O
+caps    NNS	repl
+lock    VBP	repl
+
+Makes   NNS	O
+windows NNS	mod
++       NNP O
+c       VBZ orig
+become  VBN	O
+capslock        NN	repl
+
+Swap    NNP	O
+the     DT	O
+control NN	orig
+and     CC	O
+alt     NN	repl
+key     NN	O
+
+Make    VB	O
+the     DT	O
+[       NNP	orig
+key     JJ	O
+enter   NN	O
+{       (	repl
+
+When    WRB	O
+I       PRP	O
+press   VBP	O
+ctrl    JJ	mod
++       NNP	O
+e       NN	orig
+use     IN	O
+the     DT	O
+end     NN	repl
+key     NN	O
+
+Use     NNP	O
+del     NN	repl
+when    WRB	O
+I       PRP	O
+press   VBP	O
+ctrl    JJ	mod
++       NNP	O
+d       NN	orig
+
+Instead RB	O
+of      IN	O
+control NN	mod
+left    VBN orig
+use     NN	O
+home    NN	repl
+
+Instead RB	O
+of      IN	O
+control NN	mod
+right   NN	orig
+use     NN	O
+end     NN	repl
+
+Make    NNP	O
+alt     NN	mod
+d       NN	orig
+into    IN	O
+del     NN	repl
+
+Replace NNP O
+f       NN	orig
+with    IN	O
+l       NN	repl

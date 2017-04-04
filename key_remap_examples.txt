@@ -1,0 +1,30 @@
+Makes Capslock become a Control key
+Replace the a key with the b key
+When I press ctrl + c enter F4
+Swap the capslock with shift
+Makes windows + c become capslock
+Swap the alt and control key
+Make the ; key enter :
+When I press ctrl + h use the Home key
+Use del when I press `
+Instead of control up use page up
+Instead of control down use page down
+Make alt I into ins
+Replace q with t
+Make alt 1 press F1
+The hotkey alt 2 should trigger F2
+Make windows 3 press F3
+Use shift instead of caps lock
+Makes tab become a Control key
+Replace the { key with the ( key
+When I press ctrl + d enter delete
+Swap the windows key with caps lock
+Makes windows + c become capslock
+Swap the control and alt key
+Make the [ key enter {
+When I press ctrl + e use the end key
+Use del when I press ctrl + d
+Instead of control left use home
+Instead of control right use end
+Make alt d into del
+Replace f with l
