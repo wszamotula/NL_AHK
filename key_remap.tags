@@ -3,13 +3,6 @@ Capslock        NNP	orig
 become  VB	O
 a       DT	O
 Control NNP	repl
-key     NN	O
-
-Makes   NNP	O
-Capslock        NNP	orig
-become  VB	O
-a       DT	O
-Control NNP	repl
 key     NN	O	
 
 Replace NNP	O
