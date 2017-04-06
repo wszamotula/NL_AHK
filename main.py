@@ -13,25 +13,25 @@ def main():
     data = list(reader)
     random.shuffle(data)
     acc = 0
+    script_cor = 0
     cross_val = False
 
     if cross_val:
-        for i in range(10):
-            if i == 0:
-                training_samples = data[int(len(data) * (i + 1) / 10) + 1:]
-            elif i == 9:
-                training_samples = data[:int(len(data) * i / 10) - 1]
-            else:
-                training_samples = data[:int(len(data) * i / 10) - 1] + data[int(len(data) * (i + 1) / 10) + 1:]
-            test_samples = data[int(len(data) * i / 10):int(len(data) * (i + 1) / 10)]
+        for i in range(len(data)):
+            test_sample = data[i]
+            training_samples = data[:]
+            del training_samples[i]
             chunker = NamedEntityChunker(training_samples)
-            score = chunker.evaluate([conlltags2tree([(w, t, iob) for (w, t), iob in iobs]) for iobs in test_samples])
+            score = chunker.evaluate([conlltags2tree([(w, t, iob) for (w, t), iob in test_sample])])
             print(score)
             acc += score._tags_correct / score._tags_total
-        print("\n" + "Overall accuracy: {0:.2f}%".format(acc * 10))
+            if score._tags_correct == score._tags_total:
+                script_cor += 1
+        print("\n" + "Overall tagging accuracy: {0:.2f}%".format(acc / len(data) * 100))
+        print("\n" + "Percentage of scripts correct: {0:.2f}%".format(script_cor / len(data) * 100))
 
     else:
-        training_samples = data[:int(len(data) * 0.9) - 1]
+        training_samples = data[:int(len(data) * 0.9)]
         test_samples = data[int(len(data) * 0.9):]
         chunker = NamedEntityChunker(training_samples)
         for iobs in test_samples:
