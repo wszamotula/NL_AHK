@@ -1,0 +1,20 @@
+when I press control + s launch steam
+if I hit F1 open up one note
+launch the application wunderlist when i press alt w
+open blizzard app when I press windows b
+use the key windows u to open unity
+if i press control n launch notepad++
+when I enter windows p open putty
+open audacity when I type alt a
+open texmaker if i press windows t
+launch calculator upon pressing alt c
+when i press F1 open the calculator
+Pressing control t opens the application utorrent
+hitting windows e opens excel
+hitting windows w should open word
+if I tap F5 launch power point
+use the button F8 to open command prompt
+open outlook when I press ctrl o
+launch visual studio when I type windows t
+if I press F2 open skype
+when I press windows h open hearthstone

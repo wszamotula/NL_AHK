@@ -1,0 +1,20 @@
+When I press windows C open www.wolframalpha.com
+Launch the www.google.com when I press ctrl + g
+Go to www.reddit.com when I hit alt r
+when I hit the key F1 open the site www.nytimes.com
+Open www.avclub.com when I enter control 1
+Go to the site wwww.amazon.com when i press ctrol 4
+when I press F5 go to youtube.com
+Open reddit.com whenever I press control + r
+go to www.wsj.com when i hit windows w
+When I hit alt p launch www.pepperplate.com/planner
+Bind the key home to www.gmail.com
+Use the key F4 to launch https://calendar.google.com/calendar/render#main_7
+Go to the website www.twitch.tv when I use control + t
+Pressing alt q goes to www.github.com
+www.amazon.com opens up when I hit alt a
+the website www.youtube.com launches when I tap windows y
+go to day9.tv when i type alt d
+open up avclub.com when i type control a
+when I press control u open www.ubuntu.com
+if I press F1 launch www.newegg.com

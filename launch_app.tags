@@ -1,0 +1,162 @@
+when    WRB O
+I       PRP O
+press   VBP O
+control NN  mod
++       NNP O
+s       VBZ key
+launch  JJ  O
+steam   NN  app
+
+if      IN  O
+I       PRP O
+hit     VBP O
+F1      RB  key
+open    VB  O
+up      RP  O
+one     CD  app
+note    NN  app
+
+launch  NN  O
+the     DT  O
+application     NN  O
+wunderlist      NN  app
+when    WRB O
+i       NN  O
+press   NN  O
+alt     NN  mod
+w       NN  key
+
+open    JJ  O
+blizzard        NN  app
+app     NN  app
+when    WRB O
+I       PRP O
+press   VBP O
+windows NNS mod
+b       VB  key
+
+use     IN  O
+the     DT  O
+key     JJ  O
+windows NNS mod
+u       VBP key
+to      TO  O
+open    VB  O
+unity   NN  app
+
+if      IN  O
+i       JJ  O
+press   NN  O
+control NN  mod
+n       JJ  key
+launch  NN  O
+notepad++       NN  app
+
+when    WRB O
+I       PRP O
+enter   VBP O
+windows NNS mod
+p       VBP key
+open    JJ  O
+putty   NN  app
+
+open    JJ  O
+audacity        NN  app
+when    WRB O
+I       PRP O
+type    VBP O
+alt     IN  mod
+a       DT  key
+
+open    JJ  O
+texmaker        NN  app
+if      IN  O
+i       JJ  O
+press   NN  O
+windows NNS mod
+t       VBP key
+
+launch  NN  O
+calculator      NN  app
+upon    IN  O
+pressing        VBG O
+alt     NN  mod
+c       NN  key
+
+when    WRB O
+i       JJ  O
+press   NN  O
+F1      NNP key
+open    VBZ O
+the     DT  O
+calculator      NN  app
+
+Pressing        VBG O
+control NN  mod
+t       NN  key
+opens   VBZ O
+the     DT  O
+application     NN  O
+utorrent        NN  app
+
+hitting VBG O
+windows NNS mod
+e       VBP key
+opens   NNS O
+excel   VBP app
+
+hitting VBG O
+windows NNS mod
+w       WRB key
+should  MD  O
+open    VB  O
+word    NN  app
+
+if      IN  O
+I       PRP O
+tap     VBP O
+F5      NNP key
+launch  NN  O
+power   NN  app
+point   NN  app
+
+use     IN  O
+the     DT  O
+button  NN  O
+F8      NNP key
+to      TO  O
+open    VB  O
+command NN  app
+prompt  NN  app
+
+open    JJ  O
+outlook NN  app
+when    WRB O
+I       PRP O
+press   VBP O
+ctrl    JJ  mod
+o       NN  key
+
+launch  JJ  O
+visual  JJ  app
+studio  NN  app
+when    WRB O
+I       PRP O
+type    VBP O
+windows NNS mod
+t       VB  key
+
+if      IN  O
+I       PRP O
+press   VBP O
+F2      NNP key
+open    JJ  O
+skype   NN  app
+
+when    WRB O
+I       PRP O
+press   VBP O
+windows NNS mod
+h       VBP key
+open    JJ  O
+hearthstone     NN  app

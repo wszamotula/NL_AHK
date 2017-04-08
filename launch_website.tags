@@ -1,0 +1,180 @@
+When    WRB O
+I       PRP O
+press   VBP O
+windows NNS mod
+C       NNP key
+open    JJ  O
+www.wolframalpha.com    NN  site
+
+Launch  VB  O
+the     DT  O
+www.google.com  NN  site
+when    WRB O
+I       PRP O
+press   VBP O
+ctrl    JJ  mod
++       NNP O
+g       NN  key
+
+Go      VB  O
+to      TO  O
+www.reddit.com  VB  site
+when    WRB O
+I       PRP O
+hit     VBP O
+alt     JJ  mod
+r       NN  key
+
+when    WRB O
+I       PRP O
+hit     VBD O
+the     DT  O
+key     JJ  O
+F1      NNP key
+open    VB  o
+the     DT  o
+site    NN  o
+www.nytimes.com NN  site
+
+Open    NNP O
+www.avclub.com  NN  site
+when    WRB O
+I       PRP O
+enter   VBP O
+control VB  mod
+1       CD  key
+
+Go      VB  O
+to      TO  O
+the     DT  O
+site    NN  O
+wwww.amazon.com NN  site
+when    WRB O
+i       NN  O
+press   NN  O
+ctrol   NN  mod
+4       CD  key
+
+when    WRB O
+I       PRP O
+press   VBP O
+F5      NNP key
+go      VBP O
+to      TO  O
+youtube.com     VB  site
+
+Open    JJ  O
+reddit.com      NN  site
+whenever        WRB O
+I       PRP O
+press   VBP O
+control NN  mod
++       NNP O
+r       NN  key
+
+go      VB  O
+to      TO  O
+www.wsj.com     VB  site
+when    WRB O
+i       NN  O
+hit     VBD O
+windows NNS mod
+w       NN  key
+
+When    WRB O
+I       PRP O
+hit     VBP O
+alt     JJ  mod
+p       NN  key
+launch  NN  O
+www.pepperplate.com/planner     NN  site
+
+Bind    IN  O
+the     DT  O
+key     JJ  O
+home    NN  key
+to      TO  O
+www.gmail.com   VB  site
+
+Use     VB  O
+the     DT  O
+key     JJ  O
+F4      NNP key
+to      TO  O
+launch  VB  O
+https   NN  site
+:       :   site
+//calendar.google.com/calendar/render   NN site
+#       #   site
+main_7  NN  site
+
+Go      VB  O
+to      TO  O
+the     DT  O
+website NN  O
+www.twitch.tv   NN site
+when    WRB O
+I       PRP O
+use     VBP O
+control JJ  mod
++       NNP O
+t       NN  key
+
+Pressing        VBG O
+alt     NN  mod
+q       NN  key
+goes    VBZ O
+to      TO  O
+www.github.com  VB  site
+
+www.amazon.com  NN  site
+opens   VBZ O
+up      RP  O
+when    WRB O
+I       PRP O
+hit     VBP O
+alt     RB  mod
+a       DT  key
+
+the     DT  O
+website JJ  O
+www.youtube.com NN  site
+launches        NNS O
+when    WRB O
+I       PRP O
+tap     VBP O
+windows NNS mod
+y       VBP key
+
+go      VB  O
+to      TO  O
+day9.tv VB  site
+when    WRB O
+i       JJ  O
+type    VBP O
+alt     NN  mod
+d       NN  key
+
+open    VB  O
+up      RP  O
+avclub.com      NN  site
+when    WRB O
+i       NN  O
+type    VBP O
+control NN  mod
+a       DT  key
+
+when    WRB O
+I       PRP O
+press   VBP O
+control NN  mod
+u       JJ  key
+open    JJ  O
+www.ubuntu.com  NN  site
+
+if      IN  O
+I       PRP O
+press   VBP O
+F1      NNP key
+launch  NN  O
+www.newegg.com  NN  site
