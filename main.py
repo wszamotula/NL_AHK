@@ -5,16 +5,18 @@ from tkinter import filedialog
 from NER_classifier import *
 from nltk.chunk.util import conlltags2tree
 from nltk import pos_tag, word_tokenize
-
+from script_type_classifier import classify_scripts
 
 def main():
     """Given a english phrase, converts it into the appropriate AutoHotkey script"""
     # Determine what kind of script the request is asking for
     # Parse the relevant information out of the request and pass it to function
 
-    cross_val("key_remap.tags")
-    cross_val("launch_website.tags")
-    cross_val("launch_app.tags")
+    cross_val("examples\key_remap.tags")
+    cross_val("examples\launch_website.tags")
+    cross_val("examples\launch_app.tags")
+
+    classify_scripts("examples\script_type_examples.txt")
 
     # reader = read_gmb("key_remap.tags")
     # data = list(reader)

@@ -1,0 +1,70 @@
+Makes Capslock become a Control key - key
+Replace the a key with the b key - key
+When I press ctrl + c enter F4 - key
+Swap the capslock with shift - key
+Makes windows + c become capslock - key
+Swap the alt and control key - key
+Make the ; key enter : - key
+When I press ctrl + h use the Home key - key
+Use del when I press ` - key
+Instead of control up use page up - key
+Instead of control down use page down - key
+Make alt I into ins - key
+Replace q with t - key
+Make alt 1 press F1 - key
+The hotkey alt 2 should trigger F2 - key
+Make windows 3 press F3 - key
+Use shift instead of caps lock - key
+Makes tab become a Control key - key
+Replace the { key with the ( key - key
+When I press ctrl + d enter delete - key
+Swap the windows key with caps lock - key
+Makes windows + c become capslock - key
+Swap the control and alt key - key
+Make the [ key enter { - key
+When I press ctrl + e use the end key - key
+Use del when I press ctrl + d - key
+Instead of control left use home - key
+Instead of control right use end - key
+Make alt d into del - key
+Replace f with l - key
+when I press control + s launch steam - app
+if I hit F1 open up one note - app
+launch the application wunderlist when i press alt w - app
+open blizzard app when I press windows b - app
+use the key windows u to open unity - app
+if i press control n launch notepad++ - app
+when I enter windows p open putty - app
+open audacity when I type alt a - app
+open texmaker if i press windows t - app
+launch calculator upon pressing alt c - app
+when i press F1 open the calculator - app
+Pressing control t opens the application utorrent - app
+hitting windows e opens excel - app
+hitting windows w should open word - app
+if I tap F5 launch power point - app
+use the button F8 to open command prompt - app
+open outlook when I press ctrl o - app
+launch visual studio when I type windows t - app
+if I press F2 open skype - app
+when I press windows h open hearthstone - app
+When I press windows C open www.wolframalpha.com - site
+Launch the www.google.com when I press ctrl + g - site
+Go to www.reddit.com when I hit alt r - site
+when I hit the key F1 open the site www.nytimes.com - site
+Open www.avclub.com when I enter control 1 - site
+Go to the site wwww.amazon.com when i press ctrl 4 - site
+when I press F5 go to youtube.com - site
+Open reddit.com whenever I press control + r - site
+go to www.wsj.com when i hit windows w - site
+When I hit alt p launch www.pepperplate.com/planner - site
+Bind the key home to www.gmail.com - site
+Use the key F4 to launch https://calendar.google.com/calendar/render#main_7 - site
+Go to the website www.twitch.tv when I use control + t - site
+Pressing alt q goes to www.github.com - site
+www.amazon.com opens up when I hit alt a - site
+the website www.youtube.com launches when I tap windows y - site
+go to day9.tv when i type alt d - site
+open up avclub.com when i type control a - site
+when I press control u open www.ubuntu.com - site
+if I press F1 launch www.newegg.com - site

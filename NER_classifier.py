@@ -1,6 +1,6 @@
 import string
 from nltk.stem.snowball import SnowballStemmer
-import pickle
+# import pickle
 from collections import Iterable
 from nltk.tag import ClassifierBasedTagger
 from nltk.chunk import ChunkParserI
