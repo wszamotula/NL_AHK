@@ -28,3 +28,13 @@ Instead of control left use home
 Instead of control right use end
 Make alt d into del
 Replace f with l
+swap m and n
+replace capslock and shift
+use control n to trigger numslock
+switch alt and control
+when i press control 1 enter f1
+instead of [ use {
+switch keys : and ;
+replace control 3 with f3
+make windows c trigger capslock
+use alt n instead of numlock

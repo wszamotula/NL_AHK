@@ -220,3 +220,69 @@ Replace NNP O
 f       NN	orig
 with    IN	O
 l       NN	repl
+
+Replace NNP O
+f       NN  orig
+with    IN  O
+l       NN  repl
+
+swap    NN  O
+m       NN  orig
+and     CC  O
+n       NN  repl
+
+replace VB  O
+capslock        NN  orig
+and     CC  O
+shift   NN  repl
+
+use     NN  O
+control NN  mod
+n       NN  repl
+to      TO  O
+trigger VB  O
+numslock        NN  repl
+
+switch  NN  O
+alt     NN  orig
+and     CC  O
+control NN  repl
+
+when    WRB O
+i       JJ  O
+press   NN  O
+control NN  mod
+1       CD  orig
+enter   NN  O
+f1      NN  repl
+
+instead RB  O
+of      IN  O
+[       NNP orig
+use     NN  O
+{       (   repl
+
+switch  NN  O
+keys    NNS O
+:       :   orig
+and     CC  O
+;       :   repl
+
+replace VB  O
+control NN  mod
+3       CD  orig
+with    IN  O
+f3      NN  repl
+
+make    NN  O
+windows NNS mod
+c       VBP orig
+trigger NN  O
+capslock        NN  repl
+
+use     NN  O
+alt     VBD mod
+n       JJ  orig
+instead RB  O
+of      IN  O
+numlock NN  repl

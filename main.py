@@ -1,4 +1,3 @@
-import sys
 import random
 import tkinter as tk
 from tkinter import filedialog
@@ -6,6 +5,7 @@ from NER_classifier import *
 from nltk.chunk.util import conlltags2tree
 from nltk import pos_tag, word_tokenize
 import script_type_classifier
+
 
 def main():
     """Given a english phrase, converts it into the appropriate AutoHotkey script"""
@@ -47,26 +47,20 @@ def main():
                 parsed_script = app_chunker.parse(pos_tag(word_tokenize(script_request)))
                 print(parsed_script)
 
-    # reader = read_gmb("key_remap.tags")
-    # data = list(reader)
-    # random.shuffle(data)
-    # training_samples = data[:int(len(data) * 0.9)]
-    # test_samples = data[int(len(data) * 0.9):]
-    # chunker = NamedEntityChunker(training_samples)
-    # for iobs in test_samples:
-    #     print(chunker.parse([(word, pos) for (word, pos), iob in iobs]))
-
     return
 
 
 def learn_chunker(tag_file):
+    """Learn a NER chunker for a given tag file"""
     reader = read_gmb(tag_file)
     data = list(reader)
     random.shuffle(data)
     return NamedEntityChunker(data)
 
+
 def cross_val(tag_file):
-    print("\nRunning cross validation score on data set from " + tag_file +":")
+    """Perform leave one out cross validation for a NER chunker given a tag file"""
+    print("\nRunning cross validation score on data set from " + tag_file + ":")
     reader = read_gmb(tag_file)
     data = list(reader)
     random.shuffle(data)
@@ -87,6 +81,7 @@ def cross_val(tag_file):
 
 
 def launch_site(key, modifier, site):
+    """Print a script for launching a website"""
     if modifier:
         print("The following script will launch the site {} when you press {} + {}".format(site, modifier, key))
     else:
@@ -96,6 +91,7 @@ def launch_site(key, modifier, site):
 
 
 def launch_app(key, modifier, app_name):
+    """Print a script launching an application"""
     print("Please select executable for application " + app_name)
     root = tk.Tk()
     root.withdraw()
@@ -109,6 +105,7 @@ def launch_app(key, modifier, app_name):
 
 
 def rebind_key(old_key, modifier, new_key):
+    """Print a script for rebinding keys"""
     if modifier:
         print("The following script will bind {} + {} to {}".format(modifier, old_key, new_key))
     else:
@@ -117,12 +114,13 @@ def rebind_key(old_key, modifier, new_key):
     return
 
 
-def rebind_phrase(old_phrase, new_phrase):
-    script = "::" + old_phrase + "::" + new_phrase
-    return script
+# def rebind_phrase(old_phrase, new_phrase):
+#     script = "::" + old_phrase + "::" + new_phrase
+#     return script
 
 
 def mod_to_char(modifier):
+    """return the AHK code for a given modifier"""
     if modifier.lower() == "windows":
         return "#"
     elif modifier.lower() == "alt":
@@ -134,5 +132,6 @@ def mod_to_char(modifier):
     else:
         return ""
 
+
 if __name__ == "__main__":
-    main() #sys.argv[1])
+    main()  # sys.argv[1])
