@@ -18,3 +18,24 @@ open outlook when I press ctrl o
 launch visual studio when I type windows t
 if I press F2 open skype
 when I press windows h open hearthstone
+open wunderlist when I press ctrl w
+launch steam when i hit alt s
+pressing windows a opens adobe photoshop
+when I press control n open notpad
+hitting windows w opens windows explorer
+open cmd when I press windows c
+launch calculator when I hit F1
+if I press alt q run putty
+if I hit home open pycharm
+launch texmaker when I press windows t
+bind the hotkey alt e to excel
+the hotkey windows c should open chrome
+launch the application utorrent when I hit the hotkey windows u
+the calculator should open when I press alt c
+open github when I press F5
+launch winscp after I press windows s
+use control 1 to open skype
+make the key alt 3 run onenote
+run visual studio when I hit windows 9
+launch putty after typing control 1
+use the hotkey F2 to open publisher

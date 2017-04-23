@@ -160,3 +160,171 @@ windows NNS mod
 h       VBP key
 open    JJ  O
 hearthstone     NN  app
+
+open    JJ  O
+wunderlist      NN  app
+when    WRB O
+I       PRP O
+press   VBP O
+ctrl    JJ  mod
+w       NN  key
+
+launch  NN  O
+steam   NN  app
+when    WRB O
+i       NN  O
+hit     VBD O
+alt     JJ  mod
+s       NN  key
+
+pressing        VBG O
+windows VBZ mod
+a       DT  key
+opens   JJ  O
+adobe   NN  app
+photoshop       NN  app
+
+when    WRB O
+I       PRP O
+press   VBP O
+control NN  mod
+n       JJ  key
+open    JJ  O
+notpad  NN  app
+
+hitting VBG O
+windows NNS mod
+w       VBP key
+opens   VBZ O
+windows NNS app
+explorer        NN  app
+
+open    JJ  O
+cmd     NN  app
+when    WRB O
+I       PRP O
+press   VBP O
+windows NNS mod
+c       VBP key
+
+launch  NN  O
+calculator      NN  app
+when    WRB O
+I       PRP O
+hit     VBP O
+F1      NNS key
+
+if      IN  O
+I       PRP O
+press   VBP O
+alt     JJ  mod
+q       NNS key
+run     VBP O
+putty   RB  app
+
+if      IN  O
+I       PRP O
+hit     VBP O
+home    NN  key
+open    JJ  O
+pycharm NN  app
+
+launch  NN  O
+texmaker        NN  app
+when    WRB O
+I       PRP O
+press   VBP O
+windows NNS mod
+t       VB  key
+
+bind    IN  O
+the     DT  O
+hotkey  NN  O
+alt     NN  mod
+e       NN  key
+to      TO  O
+excel   VB  app
+
+the     DT  O
+hotkey  NN  O
+windows VBZ mod
+c       NNS key
+should  MD  O
+open    VB  O
+chrome  NN  app
+
+launch  NN  O
+the     DT  O
+application     NN  O
+utorrent        NN  app
+when    WRB O
+I       PRP O
+hit     VBD O
+the     DT  O
+hotkey  NN  O
+windows VBZ mod
+u       JJ  key
+
+the     DT  O
+calculator      NN  app
+should  MD  O
+open    VB  O
+when    WRB O
+I       PRP O
+press   VBP O
+alt     JJ  mod
+c       NNS key
+
+open    JJ  O
+github  NN  app
+when    WRB O
+I       PRP O
+press   VBP O
+F5      NNP key
+
+launch  NN  O
+winscp  NN  app
+after   IN  O
+I       PRP O
+press   VBP O
+windows NNS mod
+s       VB  key
+
+use     NN  O
+control NN  mod
+1       CD  key
+to      TO  O
+open    VB  O
+skype   NN  app
+
+make    VB  O
+the     DT  O
+key     JJ  O
+alt     NN  mod
+3       CD  key
+run     NN  O
+onenote NN  app
+
+run     VB  O
+visual  JJ  app
+studio  NN  app
+when    WRB O
+I       PRP O
+hit     VBD O
+windows NNS mod
+9       CD  key
+
+launch  NN  O
+putty   NN  app
+after   IN  O
+typing  VBG O
+control NN  mod
+1       CD  key
+
+use     IN  O
+the     DT  O
+hotkey  NN  O
+F2      NNP key
+to      TO  O
+open    VB  O
+publisher       NN  app

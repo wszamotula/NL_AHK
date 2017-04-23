@@ -178,3 +178,178 @@ press   VBP O
 F1      NNP key
 launch  NN  O
 www.newegg.com  NN  site
+
+open    JJ  O
+meetup.com      NN  site
+when    WRB O
+I       PRP O
+enter   VBP O
+control VB  mod
+1       CD  key
+
+launch  NN  O
+the     DT  O
+site    NN  O
+janesville.subfinderonline.com  NN  site
+upon    IN  O
+entering        VBG O
+alt     NN  mod
+s       NN  key
+
+go      VB  O
+to      TO  O
+kotaku.com      VB  site
+when    WRB O
+i       JJ  O
+press   NN  O
+windows NNS mod
+k       VBP key
+
+when    WRB O
+I       PRP O
+press   VBP O
+alt     JJ  mod
+t       NNS key
+go      VBP O
+to      TO  O
+today.com       VB  site
+
+if      IN  O
+I       PRP O
+hit     VBP O
+F1      RB  key
+go      VBP O
+to      TO  O
+sharelatex.com  VB  site
+
+if      IN  O
+i       JJ  O
+type    NN  O
+windows NNS mod
+s       VBP key
+go      VB  O
+to      TO  O
+http    VB  site
+:       :   site
+//pages.cs.wisc.edu/~jerryzhu/cs761.html        NN  site
+
+when    WRB O
+I       PRP O
+type    VBP O
+windows NNS mod
+p       VBP key
+go      VB  O
+to      TO  O
+http    VB  site
+:       :   site
+//pages.cs.wisc.edu/~aws/courses/cs704-s17/     JJ  site
+
+open    JJ  O
+https   NN  site
+:       :   site
+//mcgrathpropertygroup.appfolio.com/connect/users/sign_in       NN  site
+when    WRB O
+I       PRP O
+type    VBP O
+alt     JJ  mod
+m       NN  key
+
+bring   VBG O
+up      RP  O
+www.codecademy.com      NN  site
+when    WRB O
+I       PRP O
+enter   VBP O
+windows NNS mod
+c       VBP key
+
+launch  NN  O
+avclub.com      IN  site
+if      IN  O
+I       PRP O
+hit     VBP O
+alt     RB  mod
+5       CD  key
+
+open    JJ  O
+gitlab.com      NN  site
+when    WRB O
+i       NN  O
+enter   VBP O
+ctrl    NN  mod
+g       NN  key
+
+bring   VBG O
+up      RP  O
+indeed.com      NN  site
+when    WRB O
+I       PRP O
+press   VBP O
+windows NNS mod
+i       VB  key
+
+go      VB  O
+to      TO  O
+www.monster.com VB  site
+when    WRB O
+I       PRP O
+type    VBP O
+control NN  mod
+m       NN  key
+
+when    WRB O
+I       PRP O
+type    VBP O
+control NN  mod
+s       NN  key
+open    JJ  O
+www.softwareengineerjobs.com    NN  site
+
+open    JJ  O
+xkcd.com        NN  site
+when    WRB O
+I       PRP O
+type    VBP O
+alt     JJ  mod
++       NNP O
+x       NN  key
+
+bind    IN  O
+the     DT  O
+key     JJ  O
+F2      NNP key
+to      TO  O
+opening VBG O
+www.google.com  NN  site
+
+use     IN  O
+the     DT  O
+keys    NNS O
+alt     VBP mod
+q       NN  key
+to      TO  O
+open    VB  O
+www.kotaku.com  NN  site
+
+pressing        VBG O
+windows NNS mod
+i       NN  key
+should  MD  O
+open    VB  O
+www.io9.com     NN  site
+
+if      IN  O
+I       PRP O
+hit     VBP O
+control JJ  mod
+g       NN  key
+open    JJ  O
+gizmodo.com     NN  site
+
+when    WRB O
+I       PRP O
+type    VBP O
+control NN  mod
+l       NN  key
+open    JJ  O
+lifehacker.com  NN  site

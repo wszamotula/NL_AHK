@@ -18,3 +18,24 @@ go to day9.tv when i type alt d
 open up avclub.com when i type control a
 when I press control u open www.ubuntu.com
 if I press F1 launch www.newegg.com
+
+open meetup.com when I enter control 1
+launch the site janesville.subfinderonline.com upon entering alt s
+go to kotaku.com when i press windows k
+when I press alt t go to today.com
+if I hit F1 go to sharelatex.com
+if i type windows s go to http://pages.cs.wisc.edu/~jerryzhu/cs761.html
+when I type windows p go to http://pages.cs.wisc.edu/~aws/courses/cs704-s17/
+open https://mcgrathpropertygroup.appfolio.com/connect/users/sign_in when I type alt m
+bring up www.codecademy.com when I enter windows c
+launch avclub.com if I hit alt 5
+open gitlab.com when i enter ctrl g
+bring up indeed.com when I press windows i
+go to www.monster.com when I type control m
+when I type control s open www.softwareengineerjobs.com
+open xkcd.com when I type alt + x
+bind the key F2 to opening www.google.com
+use the keys alt q to open www.kotaku.com
+pressing windows i should open www.io9.com
+if I hit control g open gizmodo.com
+when I type control l open lifehacker.com
