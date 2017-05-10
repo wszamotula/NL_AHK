@@ -5,47 +5,69 @@ from NER_classifier import *
 from nltk.chunk.util import conlltags2tree
 from nltk import pos_tag, word_tokenize
 import script_type_classifier
+import pickle
+import os
 
 
 def main():
     """Given a english phrase, converts it into the appropriate AutoHotkey script"""
-    # Determine what kind of script the request is asking for
-    # Parse the relevant information out of the request and pass it to function
     evaluate = True
-    interactive = False
+    interactive = True
+    reload_classifiers = False
     script_classifier = script_type_classifier.script_classifier("examples\script_type_examples.txt")
 
     if evaluate:
-        cross_val("examples\key_remap.tags")
-        cross_val("examples\launch_website.tags")
-        cross_val("examples\launch_app.tags")
-        script_classifier.evaluate_gnb()
-
+        evaluation_mode(script_classifier)
     if interactive:
-        print("Currently supports key remapping, application launching, and website launching.")
+        interactive_mode(reload_classifiers, script_classifier)
 
+    return
+
+
+def evaluation_mode(script_classifier):
+    '''Evaluate the accuracy of the named entity taggers and script type classifier using cross validation'''
+    script_classifier.evaluate_nb()
+    cross_val("examples\key_remap.tags")
+    cross_val("examples\launch_website.tags")
+    cross_val("examples\launch_app.tags")
+    return
+
+
+def interactive_mode(reload_classifiers, script_classifier):
+    '''Present interactive display to user for converting script requests into script code'''
+    print("Currently supports key remapping, application launching, and website launching.")
+    directory = 'classifiers'
+
+    if reload_classifiers:
         key_chunker = learn_chunker("examples\key_remap.tags")
         site_chunker = learn_chunker("examples\launch_website.tags")
         app_chunker = learn_chunker("examples\launch_app.tags")
-        script_gnb = script_classifier.learn_gnb()
+        script_nb = script_classifier.learn_nb()
+        pickle.dump(key_chunker, open(os.path.join(directory, 'key_chunker'), 'wb'))
+        pickle.dump(site_chunker, open(os.path.join(directory, 'site_chunker'), 'wb'))
+        pickle.dump(app_chunker, open(os.path.join(directory, 'app_chunker'), 'wb'))
+        pickle.dump(script_nb, open(os.path.join(directory, 'script_nb'), 'wb'))
+    else:
+        key_chunker = pickle.load(open(os.path.join(directory, 'key_chunker'), 'rb'))
+        site_chunker = pickle.load(open(os.path.join(directory, 'site_chunker'), 'rb'))
+        app_chunker = pickle.load(open(os.path.join(directory, 'app_chunker'), 'rb'))
+        script_nb = pickle.load(open(os.path.join(directory, 'script_nb'), 'rb'))
 
-        script_request = ""
-        while script_request != 'q':
-            script_request = input('Enter your script request (q to quit): ')
-            if script_request == 'q':
-                break
-            script_type = script_classifier.predict_script_type(script_gnb, script_request)
-            script_type = script_type[0].strip()
+    script_request = ""
+    while script_request != 'q':
+        script_request = input('\nEnter your script request (q to quit): ')
+        if script_request == 'q':
+            break
+        script_type = script_classifier.predict_script_type(script_nb, script_request)
+        script_type = script_type[0].strip()
+        tokenized_request = pos_tag(word_tokenize(script_request))
 
-            if script_type == 'key':
-                parsed_script = key_chunker.parse(pos_tag(word_tokenize(script_request)))
-                print(parsed_script)
-            elif script_type == 'site':
-                parsed_script = site_chunker.parse(pos_tag(word_tokenize(script_request)))
-                print(parsed_script)
-            elif script_type == 'app':
-                parsed_script = app_chunker.parse(pos_tag(word_tokenize(script_request)))
-                print(parsed_script)
+        if script_type == 'key':
+            rebind_key(key_chunker.parse(tokenized_request))
+        elif script_type == 'site':
+            launch_site(site_chunker.parse(tokenized_request))
+        elif script_type == 'app':
+            launch_app(app_chunker.parse(tokenized_request))
 
     return
 
@@ -80,37 +102,76 @@ def cross_val(tag_file):
     return
 
 
-def launch_site(key, modifier, site):
+def launch_site(parsed_script):
     """Print a script for launching a website"""
+    key = ""
+    modifier = ""
+    site = ""
+
+    for token in parsed_script:
+        if hasattr(token, '_label'):
+            if token._label == 'site':
+                site += token[0][0]
+            elif token._label == 'mod':
+                modifier += token[0][0]
+            elif token._label == 'key':
+                key += token[0][0]
+
     if modifier:
-        print("The following script will launch the site {} when you press {} + {}".format(site, modifier, key))
+        print("\tThe following script will launch the site {} when you press {} + {}".format(site, modifier, key))
     else:
-        print("The following script will launch the site {} when you press {}".format(site, key))
-    print(mod_to_char(modifier) + key + "::Run " + site)
+        print("\tThe following script will launch the site {} when you press {}".format(site, key))
+    print('\t' + mod_to_char(modifier) + key + "::Run " + site)
     return
 
 
-def launch_app(key, modifier, app_name):
+def launch_app(parsed_script):
     """Print a script launching an application"""
-    print("Please select executable for application " + app_name)
+    key = ''
+    modifier = ''
+    app_name = ''
+
+    for token in parsed_script:
+        if hasattr(token, '_label'):
+            if token._label == 'app':
+                app_name += token[0][0]
+            elif token._label == 'mod':
+                modifier += token[0][0]
+            elif token._label == 'key':
+                key += token[0][0]
+
+    print("\tPlease select executable for application " + app_name)
     root = tk.Tk()
     root.withdraw()
     file_path = filedialog.askopenfilename()
     if modifier:
-        print("The following script will launch the app {} when you press {} + {}".format(file_path, modifier, key))
+        print("\tThe following script will launch the app {} when you press {} + {}".format(app_name, modifier, key))
     else:
-        print("The following script will launch the app {} when you press {}".format(file_path, key))
-    print(mod_to_char(modifier) + key + "::Run " + file_path)
+        print("\tThe following script will launch the app {} when you press {}".format(app_name, key))
+    print('\t' + mod_to_char(modifier) + key + "::Run " + file_path)
     return
 
 
-def rebind_key(old_key, modifier, new_key):
+def rebind_key(parsed_script):
     """Print a script for rebinding keys"""
+    old_key = ''
+    modifier = ''
+    new_key = ''
+
+    for token in parsed_script:
+        if hasattr(token, '_label'):
+            if token._label == 'orig':
+                old_key += token[0][0]
+            elif token._label == 'mod':
+                modifier += token[0][0]
+            elif token._label == 'repl':
+                new_key += token[0][0]
+
     if modifier:
-        print("The following script will bind {} + {} to {}".format(modifier, old_key, new_key))
+        print("\tThe following script will bind {} + {} to {}".format(modifier, old_key, new_key))
     else:
-        print("The following script will bind {} to {}".format(old_key, new_key))
-    print(mod_to_char(modifier) + old_key + "::" + new_key)
+        print("\tThe following script will bind {} to {}".format(old_key, new_key))
+    print('\t' + mod_to_char(modifier) + old_key + "::" + new_key)
     return
 
 

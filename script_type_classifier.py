@@ -1,6 +1,6 @@
 import numpy
 from sklearn.feature_extraction.text import CountVectorizer, TfidfTransformer
-from sklearn.naive_bayes import GaussianNB
+from sklearn.naive_bayes import MultinomialNB
 from sklearn.model_selection import cross_val_score
 
 class script_classifier():
@@ -18,64 +18,25 @@ class script_classifier():
         return
 
 
-    def learn_gnb(self):
-        gnb = GaussianNB()
-        gnb.fit(self.normalized_counts.toarray(), self.request_labels)
-        return gnb
+    def learn_nb(self):
+        nb = MultinomialNB()
+        nb.fit(self.normalized_counts.toarray(), self.request_labels)
+        return nb
 
 
-    def evaluate_gnb(self):
-        gnb = GaussianNB()
-        scores = cross_val_score(gnb, self.normalized_counts.toarray(), self.request_labels, cv=10)
+    def evaluate_nb(self):
+        nb = MultinomialNB()
+        scores = cross_val_score(nb, self.normalized_counts.toarray(), self.request_labels, cv=10)
 
         print("\nEvaluated script identification with NB bag of words:")
         print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
         return
 
 
-    def predict_script_type(self, gnb, script_request):
+    def predict_script_type(self, nb, script_request):
         counts = self.vectorizer.transform([script_request])
         normalized_counts = self.transformer.transform(counts)
-        return gnb.predict(normalized_counts.toarray())
-
-
-# def learn_script_classifier(file_name, content="", labels=""):
-#     if content and labels:
-#         request_content = content
-#         request_labels = labels
-#     else:
-#         request_content, request_labels = read_file_content(file_name)
-#
-#     vectorizer = CountVectorizer()
-#     counts = vectorizer.fit_transform(request_content)
-#
-#     transformer = TfidfTransformer()
-#     normalized_counts = transformer.fit_transform(counts)
-#
-#     gnb = GaussianNB()
-#     gnb.fit(normalized_counts, request_labels)
-#     return gnb
-#
-#
-# def eval_script_classifier(file_name, content="", labels=""):
-#     if content and labels:
-#         request_content = content
-#         request_labels = labels
-#     else:
-#         request_content, request_labels = read_file_content(file_name)
-#
-#     vectorizer = CountVectorizer()
-#     counts = vectorizer.fit_transform(request_content)
-#
-#     transformer = TfidfTransformer()
-#     normalized_counts = transformer.fit_transform(counts)
-#
-#     gnb = GaussianNB()
-#     scores = cross_val_score(gnb, normalized_counts.toarray(), request_labels, cv=10)
-#
-#     print("\nEvalauated script identification with NB bag of words:")
-#     print("Accuracy: %0.2f (+/- %0.2f)" % (scores.mean(), scores.std() * 2))
-#     return
+        return nb.predict(normalized_counts.toarray())
 
 
 def read_file_content(file_name):
