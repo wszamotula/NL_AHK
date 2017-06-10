@@ -1,3 +1,4 @@
 # NL_AHK
-Tool to create AutoHotkey scripts from natural language requests
-Created as class assignment for http://pages.cs.wisc.edu/~aws/courses/cs704-s17/
+Scripting tools for windows PCs can greatly improve the efficiency of interacting with a computer. This ranges from basic functionality such as launching websites with a hot-key to more complex functionality like automating form entry. However, to access these benefits users need to be familiar with programming. Many users don't have any programming experience, but would still benefit from these tools. By utilizing natural language processing, we can give users a way to access these features without any programming requirements.
+
+In this project I have developed a tool that takes a users English description of a script and generates the appropriate scripting code for that request. It currently supports scripting for key rebinding, launching applications with hot-keys, and launching websites with hot-keys. This tool utilizes a naive bayes classifier with bag-of-words to identify the type of script request. It then utilizes named entity recognition to identify the key scripting components in their request. The tool achieves a high accuracy, around 90%, for identifying individual key components, but a lower accuracy, around 60%, for fully generating correct scripts.
